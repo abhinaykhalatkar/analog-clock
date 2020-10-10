@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #282c34;
+}
+.mainScreen{
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+.App {
+  text-align: center;
+  max-width: 350px;
+  max-height: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -175px;
+}
+.greeting{
+  position: relative;
+top: 10%;
+z-index: 10000;
+font-family: 'Raleway', sans-serif;
+}
+@media only screen and (max-height: 560px) {
+ .greeting {
+    display: none;
+  }
+}
+.clock{
+  min-width: 350px;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("./imgSrc/clock.png");
+  background-size: cover;
+  border-radius: 50%;
+  box-Shadow: 0 -15px 15px rgba(255,255,255,0.05),
+              inset 0 -15px 15px rgba(255,255,255,0.05),
+              0 15px 15px rgba(0,0,0,0.3),
+              inset 0 15px 15px rgba(0,0,0,0.3);
+}
+.clock:before{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec{
+  position: absolute;
+}
+.clock .hour, .hr{
+  width: 160px;
+  height: 160px;
+}
+.clock .min, .mn{
+  width: 190px;
+  height: 190px;
+}
+.clock .sec, .sc{
+  width: 230px;
+  height: 230px;
+}
+ .hr,.mn,.sc{
+   display: flex;
+   justify-content: center;
+   position: absolute;
+   border-radius: 50%;
+ }
+ .hr:before{
+   content: "";
+   position: absolute;
+   width: 8px;
+   height: 80px;
+   background: #848385;
+   z-index: 10;
+   border-radius: 6px 6px 0 0;
+ }
+ .hrn:before{
+  background:#FA115C;
+}
+
+ .mn:before{
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background: #D5D4D5;
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.mnn:before{
+  background:#FCFDFF;
+}
+
+.sc:before{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background: #FB7177;
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
+.scn:before{
+  background:#1381DF;
+}
+
+
+
+
